@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fffaf1">
+  <title>Crunchy Bliss | Bites of Happiness</title>
+  <meta name="description" content="Discover delicious chin chin, plantain chips, groundnuts and snack gift packs from Crunchy Bliss in Lagos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fffaf1;
+      --green: #344b32;
+      --orange: #d87943;
+      --ink: #252b21;
+      --muted: #77776b;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+
+    .announcement {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 11px;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 7%;
+      border-bottom: 1px solid #e9e2d5;
+      background: var(--cream);
+    }
+    .brand {
+      font: 800 25px "Playfair Display", serif;
+      color: var(--green);
+      white-space: nowrap;
+    }
+    .brand span { color: var(--orange); }
+    nav { display: flex; gap: 25px; font-size: 12px; }
+    nav a:hover { color: var(--orange); }
+    .order-small {
+      background: var(--green);
+      color: white;
+      border: 0;
+      padding: 12px 16px;
+      font-size: 11px;
+    }
+
+    .hero {
+      max-width: 1250px;
+      margin: auto;
+      padding: 75px 7%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+    .eyebrow {
+      color: var(--orange);
+      letter-spacing: 3px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    h1, h2, h3 { font-family: "Playfair Display", serif; }
+    h1 {
+      font-size: clamp(42px, 5vw, 70px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin: 20px 0;
+    }
+    h1 em, h2 em { color: var(--orange); }
+    .hero p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+      max-width: 430px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 17px;
+      background: var(--green);
+      color: white;
+      padding: 16px 22px;
+      font-size: 12px;
+      border: 0;
+    }
+    .hero-image {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: 48% 48% 4px 4px;
+      background: #f1e4d2;
+    }
+    .section {
+      max-width: 1250px;
+      margin: auto;
+      padding: 75px 7%;
+    }
+    .section-title {
+      font-size: clamp(35px, 4vw, 50px);
+      margin: 14px 0;
+    }
+    .section-intro {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      max-width: 470px;
+      margin-bottom: 35px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .product { min-width: 0; }
+    .product img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      background: #f0e7d8;
+    }
+    .product small {
+      display: block;
+      margin-top: 15px;
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 10px;
+    }
+    .product h3 { font-size: 21px; margin: 8px 0; }
+    .product p {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.8;
+      min-height: 60px;
+    }
+    .product button {
+      width: 100%;
+      padding: 12px 5px;
+      background: transparent;
+      border: 0;
+      border-top: 1px solid #e9e2d5;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .story {
+      background: #f5eddf;
+      padding: 65px 9%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+    }
+    .story img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+    }
+    .story p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 2;
+    }
+    .contact {
+      text-align: center;
+      background: var(--green);
+      color: white;
+      padding: 75px 20px;
+    }
+    .contact h2 {
+      font-size: clamp(37px, 5vw, 58px);
+      line-height: 1.15;
+    }
+    .contact h2 em { color: #edb47c; }
+    .contact p {
+      color: #e1e5dc;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .contact .button {
+      background: var(--cream);
+      color: var(--green);
+    }
+    footer {
+      padding: 30px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: #218c50;
+      color: white;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      box-shadow: 0 4px 18px #0002;
+      z-index: 5;
+    }
+
+    @media (max-width: 850px) {
+      header { padding: 17px 5%; }
+      nav { gap: 13px; }
+      .hero { padding: 55px 6%; gap: 25px; }
+      .hero-image { height: 310px; }
+      .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .product img { height: 250px; }
+      .story { padding: 55px 7%; gap: 25px; }
+    }
+    @media (max-width: 560px) {
+      header { flex-wrap: wrap; gap: 15px; }
+      .brand { font-size: 22px; }
+      nav { order: 3; width: 100%; justify-content: space-between; gap: 8px; }
+      nav a { font-size: 11px; }
+      .order-small { padding: 10px; }
+      .hero { grid-template-columns: 1fr; padding: 45px 6%; }
+      h1 { font-size: 48px; }
+      .hero-image { height: 300px; max-width: 420px; }
+      .section { padding: 55px 6%; }
+      .products { gap: 25px 13px; }
+      .product img { height: 185px; }
+      .product h3 { font-size: 18px; }
+      .product p { min-height: 85px; }
+      .story { grid-template-columns: 1fr; padding: 50px 7%; }
+      .story img { height: 270px; }
+      .contact { padding: 60px 7%; }
+      footer { padding: 25px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement">
+    A LITTLE CRUNCH. A LOT OF HAPPINESS.
+  </div>
+
+  <header>
+    <a class="brand" href="#home">Crunchy <span>Bliss.</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop snacks</a>
+      <a href="#about">Our story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="order-small" href="https://wa.me/2348162800444">Order now ↗</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">SMALL BITES, BIG JOY</div>
+        <h1>Your happy place for <em>crunchy</em> cravings.</h1>
+        <p>
+          From golden chin chin to crispy plantain chips, discover
+          delicious little treats made for sharing, gifting and
+          enjoying every day.
+        </p>
+        <a class="button" href="#shop">Explore our snacks ↗</a>
+      </div>
+      <div>
+        <img class="hero-image"
+          src="https://media.base44.com/images/public/6acc036f226efcbab196c79b/7606132de_Screenshot_20261010-001406_1.jpg"
+          alt="Golden Crunchy Bliss chin chin">
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="eyebrow">THE SNACK EDIT</div>
+      <h2 class="section-title">Find your kind of <em>crunch.</em></h2>
+      <p class="section-intro">
+        For your everyday cravings, celebrations and the people
+        you love to share with. Retail and wholesale enquiries welcome.
+      </p>
+
+      <div class="products">
+        <article class="product">
+          <img loading="lazy"
+            src="https://media.base44.com/images/public/6acc036f226efcbab196c79b/7606132de_Screenshot_20261010-001406_1.jpg"
+            alt="Golden chin chin">
+          <small>CUSTOMER FAVOURITE</small>
+          <h3>Golden Chin Chin</h3>
+          <p>Crunchy golden bites for sharing or enjoying on your own.</p>
+          <button onclick="order('Golden Chin Chin')">Ask for price ↗</button>
+        </article>
+
+        <article class="product">
+          <img loading="lazy"
+            src="https://media.base44.com/images/public/6acc036f226efcbab196c79b/2e16cdc8d_Screenshot_20261011-222436_1.jpg"
+            alt="Plantain chips">
+          <small>CRISPY & SAVOURY</small>
+          <h3>Plantain Chips</h3>
+          <p>A satisfying crunch for movie nights, trips and snack breaks.</p>
+          <button onclick="order('Plantain Chips')">Ask for price ↗</button>
+        </article>
+
+        <article class="product">
+          <img loading="lazy"
+            src="https://media.base44.com/images/public/6acc036f226efcbab196c79b/1dc0d652b_Screenshot_20261011-222816_1.jpg"
+            alt="Groundnuts in a glass bottle">
+          <small>SNACK-TIME CLASSIC</small>
+          <h3>Groundnuts</h3>
+          <p>A classic snack for your desk, your bag or your guests.</p>
+          <button onclick="order('Groundnuts')">Ask for price ↗</button>
+        </article>
+
+        <article class="product">
+          <img loading="lazy"
+            src="https://media.base44.com/images/public/6acc036f226efcbab196c79b/a84578346_Screenshot_20261011-222623_1.jpg"
+            alt="Crunchy Bliss snack gift selection">
+          <small>MADE FOR GIFTING</small>
+          <h3>Gift Packs</h3>
+          <p>Snack bundles for celebrations, visits and special moments.</p>
+          <button onclick="order('Gift Packs and Snack Combos')">Ask for options ↗</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="story" id="about">
+      <div>
+        <img loading="lazy"
+          src="https://media.base44.com/images/public/6acc036f226efcbab196c79b/2e16cdc8d_Screenshot_20261011-222436_1.jpg"
+          alt="Crunchy Bliss snacks">
+      </div>
+      <div>
+        <div class="eyebrow">A LITTLE ABOUT US</div>
+        <h2 class="section-title">Life is better with a little <em>crunch.</em></h2>
+        <p>
+          Crunchy Bliss brings extra joy to snack time. Whether you're
+          stocking up for home, sharing with friends, preparing a gift,
+          or ordering for your business, there's something delicious
+          waiting for you.
+        </p>
+        <p>Based in Ibeju-Lekki, Lagos. Retail and wholesale enquiries welcome.</p>
+        <a class="button" href="https://wa.me/2348162800444">Say hello to us ↗</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="eyebrow" style="justify-content:center">YOUR NEXT SNACK MOMENT</div>
+      <h2>Good things are just a message <em>away.</em></h2>
+      <p>Ask us about snacks, gift packs, wholesale options and current prices.</p>
+      <a class="button" href="https://wa.me/2348162800444">Chat with us on WhatsApp ↗</a>
+      <p>Phone / WhatsApp: 0816 280 0444</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home">Crunchy <span>Bliss.</span></a>
+    <span>Ibeju-Lekki, Lagos · Retail · Wholesale · Gift packs</span>
+    <span>© <span id="year"></span> Crunchy Bliss</span>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/2348162800444"
+     aria-label="Chat on WhatsApp">✆</a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function order(product) {
+      const message = "Hello Crunchy Bliss! Please share the available sizes and prices for " + product + ".";
+      window.open(
+        "https://wa.me/2348162800444?text=" + encodeURIComponent(message),
+        "_blank"
+      );
+    }
+  </script>
+</body>
+</html>
